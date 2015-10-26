@@ -25,8 +25,8 @@ MAIN_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '45@&kr00&(*pbj=t%cirss9a$af2#ym1r#*_r2)#v$u5*dspde'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if ON_HEROKU == False:
-  DEBUG = True
+if ON_HEROKU == True:
+  DEBUG = False
 else:
   DEBUG = True
 

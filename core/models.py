@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 class Contact(models.Model):
   Name = models.CharField(max_length=300)
   EMail = models.TextField(null=True, blank=True)
-  description = models.TextField(null=True, blank=True)
+  Message = models.TextField(null=True, blank=True)
   created_at = models.DateTimeField(auto_now_add=True)
   def __unicode__(self):
     return self.title
