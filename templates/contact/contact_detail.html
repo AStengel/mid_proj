@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ contact.title }}</h1>
+<p>{{ contact.description }}</p>
+<p>Posted by {{ contact.user.username }} on {{ contact.created_at }}</p>
+{% endblock %}

@@ -25,8 +25,8 @@ MAIN_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '45@&kr00&(*pbj=t%cirss9a$af2#ym1r#*_r2)#v$u5*dspde'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if ON_HEROKU == True:
-  DEBUG = False
+if ON_HEROKU == False:
+  DEBUG = True
 else:
   DEBUG = True
 
@@ -44,6 +44,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'core',
     'bootstrap3',
+    'registration',
+    'django.contrib.sites',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -116,3 +119,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(MAIN_DIR, 'static'),)
 STATIC_ROOT = 'staticfiles'
+
+LOGIN_URL = '/user/login'
+LOGIN_REDIRECT_URL ='/'
+SITE_ID = 1
